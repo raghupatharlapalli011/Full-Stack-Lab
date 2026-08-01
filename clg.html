@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>College Information Portal</title>
+</head>
+<body>
+
+    <!-- Semantic Tag: Header -->
+    <header>
+        <img src="clg_log.png" alt="Official College Logo" width="150">
+        <h1>Welcome to the College Information Portal</h1>
+        <p>This portal provides essential details about our esteemed institution.</p>
+    </header>
+
+    <!-- Semantic Tag: Navigation -->
+    <nav>
+        <h2>Quick Navigation</h2>
+        <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#media">Campus Tour</a></li>
+            <li><a href="#registration">Apply Now</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <!-- Semantic Tag: Section & Article -->
+    <section id="about">
+        <article>
+            <h2>About the College</h2>
+            <img src="building.png" alt="Main building of the college campus" width="400">
+            <br><br>
+            <p>
+                Our core values are <b>Excellence</b>, <i>Innovation</i>, and <u>Dedication</u>. 
+                We strive to be the 1<sup>st</sup> choice for students across the country. 
+                Our campus features state-of-the-art science labs where students study everything from basic water (H<sub>2</sub>O) to advanced chemistry!
+            </p>
+        </article>
+
+        <article>
+            <h2>Campus Facilities</h2>
+            <ul>
+                <li>Central Library</li>
+                <li>Advanced Computer Labs</li>
+                <li>Indoor Sports Complex</li>
+                <li>Student Cafeteria</li>
+            </ul>
+        </article>
+        
+        <article>
+            <h2>Admission Process</h2>
+            <ol>
+                <li>Fill out the online application form.</li>
+                <li>Submit your previous academic transcripts.</li>
+                <li>Pay the application fee.</li>
+                <li>Attend the personal interview.</li>
+            </ol>
+        </article>
+    </section>
+
+    <hr>
+
+    <!-- Semantic Tag: Section for Media -->
+    <section id="media">
+        <h2>Campus Media</h2>
+        
+        <!-- Audio Embed -->
+        <h3>College Anthem</h3>
+        <audio controls>
+            <source src="college-anthem.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <!-- Video Embed -->
+        <h3>Virtual Campus Tour</h3>
+        <video width="400" controls>
+            <source src="campus-tour.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <hr>
+
+    <!-- Semantic Tag: Section for Student Data & Form -->
+    <section id="registration">
+        <h2>Student Details</h2>
+        <table border="1" cellpadding="5" cellspacing="0">
+            <tr>
+                <th>Roll No</th>
+                <th>Name</th>
+                <th>Branch</th>
+                <th>Email</th>
+            </tr>
+            <tr>
+                <td>101</td>
+                <td>Alice Johnson</td>
+                <td>Computer Science</td>
+                <td>alice.j@example.com</td>
+            </tr>
+            <tr>
+                <td>102</td>
+                <td>Bob Smith</td>
+                <td>Mechanical Engineering</td>
+                <td>bob.s@example.com</td>
+            </tr>
+        </table>
+
+        <h2>New Student Registration Form</h2>
+        <form action="#" method="POST">
+            
+            <label for="studentName">Name:</label><br>
+            <input type="text" id="studentName" name="studentName" required><br><br>
+
+            <!-- HTML5 Input: Email -->
+            <label for="studentEmail">Email:</label><br>
+            <input type="email" id="studentEmail" name="studentEmail" required><br><br>
+
+            <label for="studentPassword">Password:</label><br>
+            <input type="password" id="studentPassword" name="studentPassword" required><br><br>
+
+            <!-- NEW HTML5 Input: Date -->
+            <label for="dob">Date of Birth:</label><br>
+            <input type="date" id="dob" name="dob"><br><br>
+
+            <!-- NEW HTML5 Input: Number -->
+            <label for="age">Age:</label><br>
+            <input type="number" id="age" name="age" min="16" max="100"><br><br>
+
+            <!-- NEW HTML5 Input: Color -->
+            <label for="houseColor">Choose your House Color:</label><br>
+            <input type="color" id="houseColor" name="houseColor" value="#003366"><br><br>
+
+            <!-- NEW HTML5 Input: Range -->
+            <label for="techSkill">Rate your computer skills (1 to 10):</label><br>
+            <input type="range" id="techSkill" name="techSkill" min="1" max="10"><br><br>
+
+            <label>Gender:</label><br>
+            <input type="radio" id="male" name="gender" value="Male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label><br><br>
+
+            <label>Hobbies:</label><br>
+            <input type="checkbox" id="hobby1" name="hobbies" value="Coding">
+            <label for="hobby1">Coding</label>
+            <input type="checkbox" id="hobby2" name="hobbies" value="Sports">
+            <label for="hobby2">Sports</label><br><br>
+
+            <label for="branch">Select Branch:</label><br>
+            <select id="branch" name="branch">
+                <option value="">--Select your branch--</option>
+                <option value="CS">Computer Science</option>
+                <option value="ME">Mechanical Engineering</option>
+            </select><br><br>
+
+            <label for="comments">Additional Comments:</label><br>
+            <textarea id="comments" name="comments" rows="4" cols="40"></textarea><br><br>
+
+            <input type="submit" value="Register Now">
+            <input type="reset" value="Clear Form">
+        </form>
+    </section>
+
+    <hr>
+
+    <!-- Semantic Tag: Footer -->
+    <footer>
+        <h2>Important Links</h2>
+        <p>Visit our <a href="https://www.examplecollege.edu" target="_blank">Official College Website</a> for more details.</p>
+        <p>Need to do some research? Go to <a href="https://www.google.com" target="_blank">Google</a>.</p>
+        <p>&copy; 2026 College Information Portal. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
