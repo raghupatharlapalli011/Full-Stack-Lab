@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Styled Webpage</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(white, #e8e8e8);
+            padding: 15px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 10px;
+            font-family: Georgia, serif;
+        }
+        
+        header h1 {
+            font-size: 32px;
+        }
+        
+        header p {
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+        }
+        
+        nav {
+            text-align: center;
+            padding: 10px;
+        }
+        
+        nav a {
+            color: black;
+            text-decoration: none;
+            padding: 6px 16px;
+            margin: 0 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        nav a:hover {
+            background: #ddd;
+            color: #333;
+            border-color: #999;
+        }
+        
+        canvas {
+            border: 2px solid #333;
+            border-radius: 8px;
+            display: block;
+            margin: 10px auto;
+        }
+        
+        h2 {
+            text-align: center;
+            font-family: Georgia, serif;
+        }
+        
+        .container {
+            display: flex;
+            padding: 10px 0;
+        }
+        
+        .card {
+            border: 2px solid #666;
+            border-radius: 10px;
+            padding: 15px;
+            width: 180px;
+            margin: 5px;
+            box-shadow: 3px 3px 8px #aaa;
+        }
+        
+        .card h3 {
+            font-size: 20px;
+            font-family: Georgia, serif;
+        }
+        
+        .card p {
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+        }
+        
+        .card:hover {
+            background: #f5f5f5;
+            box-shadow: 5px 5px 12px #888;
+        }
+        
+        .card button {
+            background: #444;
+            color: white;
+            border: 1px solid #666;
+            border-radius: 5px;
+            padding: 6px 22px;
+            margin-top: 8px;
+            box-shadow: 2px 2px 5px #aaa;
+        }
+        
+        .card button:hover {
+            background: #666;
+            color: white;
+            box-shadow: 3px 3px 8px #888;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>My Styled Webpage</h1>
+        <p>CSS3 Styling with HTML5 Canvas</p>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <hr>
+
+    <h2>Canvas Graphics</h2>
+    
+    <canvas id="myCanvas" width="450" height="200"></canvas>
+    
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        
+        ctx.fillStyle = "blue";
+        ctx.fillRect(30, 30, 100, 60);
+        ctx.fillStyle = "black";
+        ctx.font = "12px Arial";
+        ctx.fillText("Rectangle", 45, 110);
+        
+        ctx.beginPath();
+        ctx.fillStyle = "red";
+        ctx.arc(210, 60, 40, 0, 2 * Math.PI);
+        ctx.fill();
+        ctx.fillStyle = "black";
+        ctx.fillText("Circle", 195, 120);
+        
+        ctx.beginPath();
+        ctx.strokeStyle = "green";
+        ctx.lineWidth = 4;
+        ctx.moveTo(320, 30);
+        ctx.lineTo(400, 90);
+        ctx.stroke();
+        ctx.fillStyle = "black";
+        ctx.fillText("Line", 345, 120);
+        
+        ctx.fillStyle = "black";
+        ctx.font = "bold 22px Arial";
+        ctx.fillText("Harsha Vardhan", 150, 170);
+    </script>
+
+    <hr>
+
+    <div class="container">
+        <div class="card">
+            <h3>Web Dev</h3>
+            <p>HTML, CSS, JavaScript</p>
+            <button>Learn</button>
+        </div>
+        
+        <div class="card">
+            <h3>Design</h3>
+            <p>Graphics & UI/UX</p>
+            <button>Learn</button>
+        </div>
+        
+        <div class="card">
+            <h3>Marketing</h3>
+            <p>SEO & Social Media</p>
+            <button>Learn</button>
+        </div>
+    </div>
+
+</body>
+</html>
