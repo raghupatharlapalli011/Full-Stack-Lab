@@ -1,1 +1,135 @@
-﻿<!-- Week 02: DOM Demo Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .form-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px; 
+        }
+
+        input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        /* Styling for the dynamically generated profile */
+        #profileOutput {
+            margin-top: 30px;
+        }
+
+        .student-card {
+            background: #ffffff;
+            border-left: 5px solid #007bff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 300px;
+        }
+
+        .student-card h3 {
+            margin-top: 0;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Student Profile Generator</h2>
+
+    <div class="form-container">
+        <input type="text" id="nameInput" placeholder="Enter Student Name">
+        <input type="text" id="rollInput" placeholder="Enter Roll Number">
+        <input type="text" id="deptInput" placeholder="Enter Department">
+        <input type="number" id="cgpaInput" placeholder="Enter CGPA" step="0.1">
+        
+        <button id="generateBtn">Create Profile</button>
+    </div>
+    
+    <div id="profileOutput"></div>
+
+    
+    <script>
+        
+        class Student {
+            constructor(name, rollNumber, department, cgpa) {
+                this.name = name;
+                this.rollNumber = rollNumber;
+                this.department = department;
+                this.cgpa = cgpa;
+            }
+        }
+
+        const button = document.getElementById("generateBtn");
+        const outputContainer = document.getElementById("profileOutput");
+
+        // 3. Add an event listener to the button
+        button.addEventListener("click", function() {
+            const nameValue = document.getElementById("nameInput").value;
+            const rollValue = document.getElementById("rollInput").value;
+            const deptValue = document.getElementById("deptInput").value;
+            const cgpaValue = document.getElementById("cgpaInput").value;
+
+            if(nameValue === "" || rollValue === "" || deptValue === "" || cgpaValue === "") {
+                alert("Please fill out all fields!");
+                return; 
+            }
+
+            
+            const newStudent = new Student(nameValue, rollValue, deptValue, cgpaValue);
+
+            outputContainer.innerHTML = ""; 
+
+            
+            const cardElement = document.createElement("div");
+         
+            cardElement.className = "student-card";
+            cardElement.innerHTML = `
+                <center><h3><b>${newStudent.name}</b></h3></center>
+                <p><strong>Roll Number:</strong> ${newStudent.rollNumber}</p>
+                <p><strong>Department:</strong> ${newStudent.department}</p>
+                <p><strong>CGPA:</strong> ${newStudent.cgpa}</p>
+            `;
+            outputContainer.appendChild(cardElement);
+            document.getElementById("nameInput").value = "";
+            document.getElementById("rollInput").value = "";
+            document.getElementById("deptInput").value = "";
+            document.getElementById("cgpaInput").value = "";
+        });
+    </script>
+
+</body>
+</html>
