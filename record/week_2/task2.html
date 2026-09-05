@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Styled Webpage</title>
+    <style>
+        /* 1. Different font families and Background colors applied to the body */
+        body {
+            font-family: 'Arial', sans-serif; /* Base font family */
+            background-color: #f4f5f7; /* Background color */
+            margin: 0; /* Margin */
+            padding: 0; /* Padding */
+        }
+
+        /* 2. Gradient background and Text Shadow in the Header */
+        header {
+            background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradient background */
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            font-family: 'Georgia', serif; /* Different font family */
+            font-size: 3.5rem; /* Different font size */
+            margin: 0;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4); /* Text Shadow */
+        }
+
+        /* 3. Navigation Bar Styling */
+        nav {
+            background-color: #333;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-family: 'Verdana', sans-serif;
+            font-size: 1.1rem;
+            margin: 0 15px;
+            padding: 10px 20px;
+            border-radius: 5px; /* Border Radius */
+            transition: 0.3s; /* Smooth transition for hover effect */
+        }
+
+        /* 4. Hover effect for navigation links */
+        nav a:hover {
+            background-color: #2575fc;
+            color: #ffffff;
+            box-shadow: 0 4px 8px rgba(37, 117, 252, 0.4);
+        }
+
+        /* 5. Flexbox Layout for the Content Cards */
+        .card-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            padding: 40px 20px;
+            margin: 0 auto;
+            max-width: 1100px;
+        }
+
+        /* 6. Cards: Borders, Border Radius, Box Shadow, Padding */
+        .card {
+            background-color: white;
+            border: 2px solid #ddd; /* Borders */
+            border-radius: 12px; /* Border Radius */
+            padding: 25px; /* Padding */
+            text-align: center;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Box Shadow */
+            flex: 1; /* Makes all cards equal width */
+        }
+
+        .card h2 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 25px;
+        }
+
+        /* 7. Button Styling */
+        .card button {
+            background-color: #6a11cb;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            font-size: 1rem;
+            border-radius: 25px; /* Pill-shaped button */
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        /* 8. Hover effect for buttons */
+        .card button:hover {
+            background-color: #2575fc;
+            transform: translateY(-3px); /* Lifts the button up slightly */
+            box-shadow: 0 6px 12px rgba(37, 117, 252, 0.3);
+        }
+
+        /* 9. Footer Styling */
+        footer {
+            background-color: #222;
+            color: #aaa;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>My Styled Webpage</h1>
+        <p>A demonstration of modern CSS properties</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Three Content Cards Section -->
+    <main class="card-container">
+        
+        <!-- Card 1 -->
+        <div class="card">
+            <h2>Web Design</h2>
+            <p>Creating beautiful, responsive interfaces using HTML5 and modern CSS techniques like flexbox and grid layouts.</p>
+            <button>Learn More</button>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <h2>Graphics</h2>
+            <p>Utilizing the HTML5 Canvas element to draw shapes, text, and dynamic graphics directly in the browser.</p>
+            <button>Learn More</button>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <h2>Interactivity</h2>
+            <p>Bringing web pages to life with hover effects, transitions, smooth shadows, and interactive UI elements.</p>
+            <button>Learn More</button>
+        </div>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2026 My Styled Webpage. All CSS requirements met successfully.</p>
+    </footer>
+
+</body>
+</html>
