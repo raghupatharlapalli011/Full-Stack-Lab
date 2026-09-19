@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pure Semantic HTML Static Webpage</title>
+    <style link = "style.css" rel = "style.sheet">
+        #head{
+            border: 2px solid rgb(251, 133, 0);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border-radius: 10px;
+        }
+        .start{
+            color :green;
+        }
+        .middle{
+            color :green;
+        }
+        .text{
+            font-style: italic;
+        }
+        .Semantic{
+            color : green;
+        }
+        .article{
+            background-color :rgb(251, 133, 0);
+            color : white;
+            font-family:sans-serif;
+        }
+        .native{
+            color : rgb(0, 150, 199)
+        }
+        .lege{
+            color : rgb(0, 180, 216)
+        }
+       
+        .field:hover{
+            border-color:rgb(251, 133, 0);
+           transition: border-color 0.5s ease;
+           
+        }
+        #about{
+            border: 2px solid black;
+            background-color: rgb(173, 232, 244);
+        }
+       #about:hover{
+        border-color:rgb(251, 133, 0);
+           transition: border-color 0.5s ease;
+       }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header id = "head">
+        <table width="100%" border="0" cellspacing="0" cellpadding="10">
+            <tr>
+                <td>
+                    <h1><span class ="start">S</span>tatic<span class = "middle">W</span>eb</h1>
+                </td>
+                <td align="right">
+                    <nav>
+                        <a href="#home">Home</a> &nbsp;|&nbsp;
+                        <a href="#articles">Articles</a> &nbsp;|&nbsp;
+                        <a href="#about">About</a> &nbsp;|&nbsp;
+                        <a href="#contact">Contact Us</a>
+                    </nav>
+                </td>
+            </tr>
+        </table>
+    </header>
+
+    <hr>
+
+    <!-- Hero / Showcase Section -->
+    <section id="home">
+        <center>
+            <h2><span class = "Semantic">Semantic</span> Structures Without CSS</h2>
+            <p class = "text">This layout uses raw HTML components to build an organized document hierarchy that browsers can cleanly parse out-of-the-box.</p>
+            <p><a href="#articles"><b>Read Our Articles Below &darr;</b></a></p>
+        </center>
+    </section>
+
+    <hr>
+
+    <!-- Main Content Layout using a Structural Table -->
+    <table width="100%" border="0" cellspacing="0" cellpadding="20">
+        <tr valign="top">
+           
+            <!-- Left Side: Main Content Column -->
+            <td width="70%">
+                <main id="articles">
+                   
+                    <article class ="article">
+                        <h2>1. Core Structural Tags</h2>
+                        <p>Published: July 7, 2026</p>
+                        <p>When you omit cascading style sheets entirely, the semantic markup handles all of the structural heavy lifting. Elements like <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, and <code>&lt;section&gt;</code> tell screen readers and web scrapers exactly how information flows.</p>
+                        <p>Using raw browser defaults ensures excellent loading performance, perfect accessibility compliance, and absolute structural clarity.</p>
+                    </article>
+
+                    <br><hr><br>
+
+                    <article >
+                        <h2 class = "native">2. Native Interaction Elements</h2>
+                        <p>Published: July 5, 2026</p>
+                        <p>Browsers come equipped with excellent interactive elements by default. We can capture text inputs, provide multiple-choice configurations, and submit structured information to backend parsers using pure markup.</p>
+                       
+                        <h3>Interactive Demonstration Forms</h3>
+                        <form id="contact" action="#" method="post">
+                            <fieldset class = "field">
+                                <legend class = "lege"><b>User Inquiry Form</b></legend>
+                                <p>
+                                    <label for="name">Full Name: </label>
+                                    <input type="text" id="name" name="username" required placeholder="John Doe">
+                                </p>
+                                <p>
+                                    <label for="email">Email Address: </label>
+                                    <input type="email" id="email" name="useremail" required>
+                                </p>
+                                <p>
+                                    <label for="topic">Inquiry Topic: </label>
+                                    <select id="topic" name="usertopic">
+                                        <option value="general">General Feedback</option>
+                                        <option value="technical">Technical Architecture</option>
+                                        <option value="academics">Academic Curriculum</option>
+                                    </select>
+                                </p>
+                                <p>
+                                    <label for="message">Message Details:</label><br>
+                                    <textarea id="message" name="usermessage" rows="5" cols="40" placeholder="Type your notes here..."></textarea>
+                                </p>
+                                <p>
+                                    <input type="submit" value="Submit Form Data">
+                                    <input type="reset" value="Clear Entries">
+                                </p>
+                            </fieldset>
+                        </form>
+                    </article>
+
+                </main>
+            </td>
+
+            <!-- Right Side: Sidebar Column -->
+            <td width="30%" bgcolor="#f4f4f4" id="about">
+                <aside >
+                    <h3>Document References</h3>
+                    <p>Static pages map data out directly without real-time database queries or processor overhead.</p>
+                   
+                    <h4>Core Benefits:</h4>
+                    <ul>
+                        <li>Instant browser painting</li>
+                        <li>Low memory footprints</li>
+                        <li>High data compatibility</li>
+                    </ul>
+
+                    <h4>Required Components:</h4>
+                    <ol>
+                        <li>Document Type Definition</li>
+                        <li>Semantic Wrapper Blocks</li>
+                        <li>Data Input Control Interfaces</li>
+                    </ol>
+                </aside>
+            </td>
+
+        </tr>
+    </table>
+
+    <hr>
+
+    <!-- Footer Section -->
+    <footer>
+        <center>
+            <p>&copy; 2026 Pure HTML Architecture. Assembled completely without style configurations.</p>
+        </center>
+    </footer>
+
+</body>
+</html>
