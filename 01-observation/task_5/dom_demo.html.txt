@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Q4: DOM Demonstration</title> 
+  <style>
+    body { font-family: Arial, sans-serif; background: #f8f9fa; padding: 30px; text-align: center; }
+    .box { background: white; max-width: 500px; margin: 0 auto; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    #target-element { padding: 15px; border: 2px dashed #999; margin: 20px 0; border-radius: 8px; font-size: 18px; color: #333; }
+    button { padding: 10px 16px; margin: 5px; border: none; border-radius: 5px; cursor: pointer; font-size: 14px; background: #007bff; color: white; transition: 0.2s; }
+    button:hover { background: #0056b3; }
+    a { display: inline-block; margin-top: 15px; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <h2>DOM Manipulation Demo</h2>
+
+    <!-- Target element whose Content, Style, and Attributes will change -->
+    <div id="target-element" title="Original Title">
+      Original Content: Hello World!
+    </div>
+
+    <!-- Link to demonstrate attribute modification -->
+    <div>
+      <a id="target-link" href="https://google.com" target="_blank">Visit Search Engine (Google)</a>
+    </div>
+    <br>
+
+    <!-- Action Buttons -->
+    <button onclick="changeContent()">1. Change Content</button>
+    <button onclick="changeStyle()">2. Change Style</button>
+    <button onclick="changeAttribute()">3. Change Attribute</button>
+  </div>
+
+  <script>
+    const element = document.getElementById('target-element');
+    const link = document.getElementById('target-link');
+
+    // 1. Change CONTENT using innerHTML / textContent
+    function changeContent() {
+      element.innerHTML = "<strong>New Content:</strong> DOM content changed dynamically!";
+    }
+
+    // 2. Change STYLE using style property
+    function changeStyle() {
+      element.style.color = "white";
+      element.style.backgroundColor = "#28a745";
+      element.style.fontSize = "22px";
+      element.style.border = "2px solid #1e7e34";
+    }
+
+    // 3. Change ATTRIBUTES using setAttribute
+    function changeAttribute() {
+      // Changes link destination and text
+      link.setAttribute('href', 'https://github.com');
+      link.innerText = 'Visit GitHub (Attribute & Link Changed!)';
+      element.setAttribute('title', 'This tooltip attribute was updated by JS!');
+      alert('Attribute changed! Hover on the box or click the link.');
+    }
+  </script>
